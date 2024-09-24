@@ -2,7 +2,7 @@ using Microsoft.Maui.Controls;
 
 namespace trabalho.novo
 {
-    public class questao
+    public class Questao
     {
         public string Pergunta;
         public string Resposta1;
@@ -73,11 +73,11 @@ namespace trabalho.novo
             }
         }
 
-        public questao()
+        public Questao()
         {
 
         }
-        public questao(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5)
+        public Questao(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5)
         {
             Labelpergunta = labelpergunta;
             ButtonResposta1 = button1;
