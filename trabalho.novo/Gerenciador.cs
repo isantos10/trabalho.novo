@@ -8,25 +8,13 @@ namespace trabalho.novo
 
         Label labelPontuacao;
         Label labelNivel;
-        public Gerenciador(Label labelPerg, Button ButtonResposta1, Button ButtonResposta2, Button ButtonResposta3, Button ButtonResposta4, Button ButtonResposta5, Label labelPontuacao, object labelPontuacao1, Label labelNivel)
+        public Gerenciador(Label labelPerg, Button ButtonResposta1, Button ButtonResposta2, Button ButtonResposta3, Button ButtonResposta4, Button ButtonResposta5, Label labelPontuacao, Label labelNivel)
 
         {
             this.labelPontuacao = labelPontuacao;
             this.labelNivel = labelNivel;
             CriaPerguntas(labelPerg, ButtonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
             ProximaQuestao();
-        }
-
-        public Gerenciador(Label? labelPergunta, Button buttonResposta1, Button buttonResposta2, Button buttonResposta3, Button buttonResposta4, Button buttonResposta5, object labelPontuacao1, object labelNivel1)
-        {
-            this.labelPergunta = labelPergunta;
-            this.buttonResposta1 = buttonResposta1;
-            this.buttonResposta2 = buttonResposta2;
-            this.buttonResposta3 = buttonResposta3;
-            this.buttonResposta4 = buttonResposta4;
-            this.buttonResposta5 = buttonResposta5;
-            this.labelPontuacao1 = labelPontuacao1;
-            this.labelNivel1 = labelNivel1;
         }
 
         void CriaPerguntas(Label labelPerg, Button buttonResposta1, Button ButtonResposta2, Button ButtonResposta3, Button ButtonResposta4, Button ButtonResposta5)
@@ -86,8 +74,171 @@ namespace trabalho.novo
             Q5.Respostacorreta = 3;
             ListaQuestoes.Add(Q5);
 
+            var Q6 = new Questao();
+            Q6.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q6.Pergunta = "Quem pintou a Mona Lisa?";
+            Q6.Resposta1 = "Pablo Picasso";
+            Q6.Resposta2 = "Leonardo da Vinci";
+            Q6.Resposta3 = "Vincent van Gogh";
+            Q6.Resposta4 = "Claude Monet";
+            Q6.Resposta5 = "Salvador Dalí";
+            Q6.Respostacorreta = 2;
+            ListaQuestoes.Add(Q6);
 
-            ProximaQuestao();
+            var Q7 = new Questao();
+            Q7.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q7.Pergunta = "Qual é a fórmula química da água?";
+            Q7.Resposta1 = "H2O";
+            Q7.Resposta2 = "CO2";
+            Q7.Resposta3 = "O2";
+            Q7.Resposta4 = "NaCl";
+            Q7.Resposta5 = "C6H12O6";
+            Q7.Respostacorreta = 1;
+            ListaQuestoes.Add(Q7);
+
+            var Q8 = new Questao();
+            Q8.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q8.Pergunta = "Qual é o maior oceano do mundo?";
+            Q8.Resposta1 = "Oceano Atlântico";
+            Q8.Resposta2 = "Oceano Índico";
+            Q8.Resposta3 = "Oceano Pacífico";
+            Q8.Resposta4 = "Oceano Ártico";
+            Q8.Resposta5 = "Oceano Antártico";
+            Q8.Respostacorreta = 3;
+            ListaQuestoes.Add(Q8);
+
+            var Q9 = new Questao();
+            Q9.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q9.Pergunta = "Qual é o animal mais rápido do mundo?";
+            Q9.Resposta1 = "Guepardo";
+            Q9.Resposta2 = "Falcão-peregrino";
+            Q9.Resposta3 = "Leão";
+            Q9.Resposta4 = "Antílope";
+            Q9.Resposta5 = "Cavalo";
+            Q9.Respostacorreta = 2;
+            ListaQuestoes.Add(Q9);
+
+            var Q10 = new Questao();
+            Q10.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q10.Pergunta = "Qual é a capital da Noruega?";
+            Q10.Resposta1 = "Oslo";
+            Q10.Resposta2 = "Estocolmo";
+            Q10.Resposta3 = "Copenhague";
+            Q10.Resposta4 = "Helsinque";
+            Q10.Resposta5 = "Reiquiavique";
+            Q10.Respostacorreta = 1;
+            ListaQuestoes.Add(Q10);
+
+            var Q11 = new Questao();
+            Q11.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q11.Pergunta = "Qual é a capital da Alemanha?";
+            Q11.Resposta1 = "Berlim";
+            Q11.Resposta2 = "Munique";
+            Q11.Resposta3 = "Frankfurt";
+            Q11.Resposta4 = "Hamburgo";
+            Q11.Resposta5 = "Colônia";
+            Q11.Respostacorreta = 1;
+            ListaQuestoes.Add(Q11);
+
+            var Q12 = new Questao();
+            Q12.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q12.Pergunta = "Quem escreveu 'A Divina Comédia'?";
+            Q12.Resposta1 = "Virgílio";
+            Q12.Resposta2 = "Dante Alighieri";
+            Q12.Resposta3 = "Homero";
+            Q12.Resposta4 = "Goethe";
+            Q12.Resposta5 = "Cervantes";
+            Q12.Respostacorreta = 2;
+            ListaQuestoes.Add(Q12);
+
+            var Q13 = new Questao();
+            Q13.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q13.Pergunta = "Qual é o continente mais seco do mundo?";
+            Q13.Resposta1 = "África";
+            Q13.Resposta2 = "Ásia";
+            Q13.Resposta3 = "Antártida";
+            Q13.Resposta4 = "América do Sul";
+            Q13.Resposta5 = "Oceania";
+            Q13.Respostacorreta = 3;
+            ListaQuestoes.Add(Q13);
+
+            var Q14 = new Questao();
+            Q14.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q14.Pergunta = "Qual é o maior país do mundo em extensão territorial?";
+            Q14.Resposta1 = "Canadá";
+            Q14.Resposta2 = "Rússia";
+            Q14.Resposta3 = "China";
+            Q14.Resposta4 = "Estados Unidos";
+            Q14.Resposta5 = "Brasil";
+            Q14.Respostacorreta = 2;
+            ListaQuestoes.Add(Q14);
+
+            var Q15 = new Questao();
+            Q15.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q15.Pergunta = "Quem foi o primeiro presidente dos Estados Unidos?";
+            Q15.Resposta1 = "Abraham Lincoln";
+            Q15.Resposta2 = "George Washington";
+            Q15.Resposta3 = "Thomas Jefferson";
+            Q15.Resposta4 = "Theodore Roosevelt";
+            Q15.Resposta5 = "John Adams";
+            Q15.Respostacorreta = 2;
+            ListaQuestoes.Add(Q15);
+
+            var Q16 = new Questao();
+            Q16.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q16.Pergunta = "Qual é o principal gás responsável pelo efeito estufa?";
+            Q16.Resposta1 = "Oxigênio";
+            Q16.Resposta2 = "Dióxido de carbono";
+            Q16.Resposta3 = "Metano";
+            Q16.Resposta4 = "Nitrogênio";
+            Q16.Resposta5 = "Hélio";
+            Q16.Respostacorreta = 2;
+            ListaQuestoes.Add(Q16);
+
+            var Q17 = new Questao();
+            Q17.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q17.Pergunta = "Qual é o nome do famoso relógio em Londres?";
+            Q17.Resposta1 = "Big Ben";
+            Q17.Resposta2 = "Torre Eiffel";
+            Q17.Resposta3 = "Torre de Pisa";
+            Q17.Resposta4 = "Torre do Relógio";
+            Q17.Resposta5 = "Torre de Londres";
+            Q17.Respostacorreta = 1;
+            ListaQuestoes.Add(Q17);
+
+            var Q18 = new Questao();
+            Q18.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q18.Pergunta = "Quem é o deus do trovão na mitologia nórdica?";
+            Q18.Resposta1 = "Thor";
+            Q18.Resposta2 = "Odin";
+            Q18.Resposta3 = "Loki";
+            Q18.Resposta4 = "Freyr";
+            Q18.Resposta5 = "Balder";
+            Q18.Respostacorreta = 1;
+            ListaQuestoes.Add(Q18);
+
+            var Q19 = new Questao();
+            Q19.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q19.Pergunta = "Qual é a capital da Itália?";
+            Q19.Resposta1 = "Veneza";
+            Q19.Resposta2 = "Milão";
+            Q19.Resposta3 = "Roma";
+            Q19.Resposta4 = "Nápoles";
+            Q19.Resposta5 = "Florença";
+            Q19.Respostacorreta = 3;
+            ListaQuestoes.Add(Q19);
+
+            var Q20 = new Questao();
+            Q20.ConfiguraEstruturaDesenho(labelPerg, buttonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5);
+            Q20.Pergunta = "Qual é o símbolo da paz?";
+            Q20.Resposta1 = "Cruz";
+            Q20.Resposta2 = "Pomba";
+            Q20.Resposta3 = "Estrela";
+            Q20.Resposta4 = "Coração";
+            Q20.Resposta5 = "Arco-íris";
+            Q20.Respostacorreta = 2;
+            ListaQuestoes.Add(Q20);
+
 
         }
         public async void VerificaCorreta(int RR)
@@ -112,23 +263,15 @@ namespace trabalho.novo
 
         void ProximaQuestao()
         {
-            var numAleat = Random.Shared.Next(0, ListaQuestoes.Count-1);
+            var numAleat = Random.Shared.Next(0, ListaQuestoes.Count - 1);
             while (ListaQuestoesRespondidas.Contains(numAleat))
-                numAleat = Random.Shared.Next(0, ListaQuestoes.Count-1);
+                numAleat = Random.Shared.Next(0, ListaQuestoes.Count - 1);
             ListaQuestoesRespondidas.Add(numAleat);
             QuestaoCorrente = ListaQuestoes[numAleat];
             QuestaoCorrente.Desenhar();
         }
         public int Pontuacao { get; private set; }
         int NivelAtual = 0;
-        private Label? labelPergunta;
-        private Button buttonResposta1;
-        private Button buttonResposta2;
-        private Button buttonResposta3;
-        private Button buttonResposta4;
-        private Button buttonResposta5;
-        private object labelPontuacao1;
-        private object labelNivel1;
 
         void Inicializar()
         {

@@ -26,7 +26,8 @@
                        FontSize="14"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
-                       Padding="10"/>
+                       Padding="10"
+                       x:Name="labelPergunta" />
 
 
                 <Button Grid.Row="2"
@@ -123,13 +124,13 @@
 
                 <Label Grid.Row="8"
                        Text="Pontuação:"
-                       x:Name="Pontuacao"
+                       x:Name="labelPontuacao"
                        Grid.ColumnSpan="2"/>
 
                 <Label Grid.Row="8"
                        Text="Nível:"
                        Grid.Column="2"
-                       x:Name="Nivel"/>
+                       x:Name="labelNivel"/>
 
         </Grid>
 

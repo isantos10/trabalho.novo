@@ -3,14 +3,11 @@
 public partial class MainPage : ContentPage
 {
     Gerenciador gerenciador;
-    private Label labelPergunta;
-    private object labelPontuacao;
-    private object labelNivel1;
 
     public MainPage()
     {
         InitializeComponent();
-        gerenciador= new Gerenciador(labelPergunta, buttonResposta1, buttonResposta2, buttonResposta3, buttonResposta4, buttonResposta5, labelPontuacao, labelNivel1);
+        gerenciador= new Gerenciador (labelPergunta, buttonResposta1, buttonResposta2, buttonResposta3, buttonResposta4, buttonResposta5, labelPontuacao, labelNivel);
     }   
 
     void ButtonResposta1Clicked(object sender, EventArgs args)
