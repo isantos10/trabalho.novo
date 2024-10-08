@@ -8,6 +8,12 @@ namespace trabalho.novo
 
         Label labelPontuacao;
         Label labelNivel;
+
+         public Questao GetQuestaoCorrente()
+        {
+            return QuestaoCorrente;
+        }
+        
         public Gerenciador(Label labelPerg, Button ButtonResposta1, Button ButtonResposta2, Button ButtonResposta3, Button ButtonResposta4, Button ButtonResposta5, Label labelPontuacao, Label labelNivel)
 
         {
@@ -261,7 +267,7 @@ namespace trabalho.novo
             }
         }
 
-        void ProximaQuestao()
+       public void ProximaQuestao()
         {
             var numAleat = Random.Shared.Next(0, ListaQuestoes.Count - 1);
             while (ListaQuestoesRespondidas.Contains(numAleat))

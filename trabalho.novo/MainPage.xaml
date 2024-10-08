@@ -88,7 +88,7 @@
 
                 <Button Grid.Row="7"
                         Grid.Column="0"
-                        Text="Cartas"
+                        Text="3 Pular"
                         BackgroundColor="#337a77"
                         TextColor="White"
                         FontSize="12"
@@ -96,7 +96,9 @@
                         VerticalOptions="Center"
                         WidthRequest="110"
                         HeightRequest="40"
-                        Margin="5"/>
+                        Margin="5"
+                        x:Name="pular"
+                        Clicked="pularclicado"/>
 
                 <Button Grid.Row="7"
                         Grid.Column="1"
@@ -108,7 +110,8 @@
                         VerticalOptions="Center"
                         WidthRequest="110"
                         HeightRequest="40"
-                        Margin="5"/>
+                        Margin="5"
+                        Clicked="retirarclicado"/>
 
                 <Button Grid.Row="7"
                         Grid.Column="2"
@@ -120,7 +123,8 @@
                         VerticalOptions="Center"
                         WidthRequest="110"
                         HeightRequest="40"
-                        Margin="5"/>
+                        Margin="5"
+                        Clicked="universitarioclicado"/>
 
                 <Label Grid.Row="8"
                        Text="Pontuação:"

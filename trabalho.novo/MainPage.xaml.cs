@@ -3,6 +3,10 @@
 public partial class MainPage : ContentPage
 {
     Gerenciador gerenciador;
+    private int click=0;
+
+	private int clicked3vezes=0;
+
 
     public MainPage()
     {
@@ -30,5 +34,54 @@ public partial class MainPage : ContentPage
 	{
 		gerenciador.VerificaCorreta(5);
 	}
+ 
+    void retirarclicado(object sender, EventArgs args)
+	{
+		var ajuda = new RetiraErrada();
+		ajuda.ConfiguraDesenho( buttonResposta1, buttonResposta2,  buttonResposta3,  buttonResposta4, buttonResposta5);
+		ajuda.RealizaAjuda(gerenciador.GetQuestaoCorrente());
+		(sender as Button).IsVisible = false;
 
+	}
+
+	void universitarioclicado(object sender, EventArgs args)
+	{
+		var ajuda = new Universitario();
+		ajuda.ConfiguraDesenho( buttonResposta1, buttonResposta2,  buttonResposta3,  buttonResposta4, buttonResposta5);
+		ajuda.RealizaAjuda(gerenciador.GetQuestaoCorrente());
+		(sender as Button).IsVisible = false;
+
+	}
+    void pularclicado(object sender, EventArgs args)
+	{
+		gerenciador.ProximaQuestao();
+
+		click++;
+
+		clicked3vezes++;
+
+       if  (click>=3)
+	   {
+		(sender as Button).IsVisible = false;
+	   }
+	   else
+	   {
+	   (sender as Button).IsVisible = true;
+	   }
+
+		if (clicked3vezes==1)
+		{
+			pular.Text="2 pula";
+		}
+		else if (clicked3vezes==2)
+		{
+			pular.Text="1 pula";
+		}
+		else if(clicked3vezes>=3)
+		{
+			(sender as Button).IsVisible = false;
+		}
+
+
+	}
 }
